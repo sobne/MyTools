@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyConvertor</string>
+    <string name="convertor">进制转换器</string>
+    <string name="bit">二进制</string>
+    <string name="oct">八进制</string>
+    <string name="des">十进制</string>
+    <string name="hex">十六进制</string>
+</resources>
