@@ -1,1 +1,1 @@
-include ':app', ':myconvertor'
+include ':app', ':myconvertor', ':mybarcode'

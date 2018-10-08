@@ -12,6 +12,7 @@ import android.widget.SimpleAdapter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import cn.sobne.mybarcode.BarcodeActivity;
 import cn.sobne.myconvertor.ConvertorActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -55,6 +56,9 @@ public class MainActivity extends AppCompatActivity {
                     case 0:
                         startActivity(new Intent(MainActivity.this, ConvertorActivity.class));
                         break;
+                    case 1:
+                        startActivity(new Intent(MainActivity.this, BarcodeActivity.class));
+                        break;
                 }
             }
         });
@@ -64,10 +68,12 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<HashMap<String, Object>> getImageItems()
     {
         int[] imageRes = {
-                R.drawable.convertor};
-
+                R.drawable.convertor,
+                R.drawable.scan
+        };
         String[] name = {
-                "进制转换"
+                "进制转换",
+                "条码扫描"
         };
         int length = imageRes.length;
 
