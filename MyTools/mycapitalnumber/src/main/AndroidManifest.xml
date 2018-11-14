@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.sobne.mycapitalnumber">
+
+    <application
+        android:theme="@style/AppTheme">
+        <activity android:name=".CapitalActivity" android:label="大写数字">
+        </activity>
+    </application>
+
+</manifest>

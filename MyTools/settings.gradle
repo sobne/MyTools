@@ -1,1 +1,1 @@
-include ':app', ':myconvertor', ':mybarcode'
+include ':app', ':myconvertor', ':mybarcode', ':mycapitalnumber', ':utils4a-release'
