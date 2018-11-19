@@ -12,6 +12,7 @@ import android.widget.SimpleAdapter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import cn.sobne.LedMonitorActivity;
 import cn.sobne.mybarcode.BarcodeActivity;
 import cn.sobne.mycapitalnumber.CapitalActivity;
 import cn.sobne.myconvertor.ConvertorActivity;
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch(position)
+                switch(items[position])
                 {
                     case 0:
                         startActivity(new Intent(MainActivity.this, ConvertorActivity.class));
@@ -63,24 +64,27 @@ public class MainActivity extends AppCompatActivity {
                     case 2:
                         startActivity(new Intent(MainActivity.this, CapitalActivity.class));
                         break;
+                    case 3:
+                        startActivity(new Intent(MainActivity.this, LedMonitorActivity.class));
+                        break;
                 }
             }
         });
 
     }
 
+    private int[] items={0,1,2,3};
     private ArrayList<HashMap<String, Object>> getImageItems()
     {
         int[] imageRes = {
-                R.drawable.convertor,R.drawable.scan,R.drawable.zero
+                R.drawable.convertor,R.drawable.scan,R.drawable.zero,R.drawable.maquee
         };
         String[] name = {
-                "进制转换","条码扫描","大写数字"
+                "进制转换","条码扫描","大写数字","跑马灯"
         };
-        int length = imageRes.length;
 
         ArrayList<HashMap<String, Object>> lstImageItem = new ArrayList<HashMap<String, Object>>();
-        for (int i = 0; i < length; i++) {
+        for (int i:items) {
             HashMap<String, Object> map = new HashMap<String, Object>();
             map.put("ItemImage", imageRes[i]);
             map.put("ItemText", name[i]);

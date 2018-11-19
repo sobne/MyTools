@@ -1,4 +1,8 @@
 # MyTools
+
+history:
+
+20181119  MyLedMonitor		create maqueedisplay
 20181113  MyCapitalnumber	encapsulate audioutils to utils4a.aar
 20181112  MyCapitalnumber	new app,and using audioutils
 20181008  MyBarcode   		using zxing@git to do barcode/qrcode scan & generate

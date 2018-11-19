@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dip" >
+    <ViewFlipper
+        android:id="@+id/flipper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dip"
+        android:flipInterval="2000" >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="测试文字-1"
+            android:textSize="26sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="测试文字-2"
+            android:textSize="26sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="测试文字-3"
+            android:textSize="26sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="测试文字-4"
+            android:textSize="26sp" />
+    </ViewFlipper>
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:text="输入文字,点击预览" />
+
+    <EditText
+        android:id="@+id/et_led_text"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="1dp"
+        android:minLines="1"
+        android:gravity="top"
+        android:textSize="20sp"
+        android:hint="输入文字,多个换行"/>
+
+    <Button
+        android:id="@+id/btn_led_dispaly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="预 览"/>
+</LinearLayout>

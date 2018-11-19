@@ -1,15 +1,22 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
+//apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 27
+
+
+
     defaultConfig {
-        applicationId "cn.sobne.mytools"
+        //applicationId "cn.sobne"
         minSdkVersion 19
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -21,8 +28,7 @@ android {
             dirs 'libs'
         }
     }
-    productFlavors {
-    }
+
 }
 
 dependencies {
@@ -32,8 +38,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:0.5'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2'
-    implementation project(':myconvertor')
-    implementation project(':mybarcode')
-    implementation project(':mycapitalnumber')
-    implementation project(':myledmonitor')
+    implementation project(':utils4a-release')
 }

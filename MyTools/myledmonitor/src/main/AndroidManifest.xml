@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.sobne">
+
+    <application>
+        <activity
+            android:name=".LedMonitorActivity"
+            android:label="LED monitor" />
+        <activity
+            android:name=".LedDisplayActivity" />
+        <activity android:name=".MaqueeTextViewActivity"
+            android:label="maquee text view version 1.0"></activity>
+    </application>
+
+</manifest>
