@@ -1,24 +1,31 @@
 package cn.sobne.mytools;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
 import cn.sobne.LedMonitorActivity;
+import cn.sobne.myascll.AscllActivity;
 import cn.sobne.mybarcode.BarcodeActivity;
 import cn.sobne.mycapitalnumber.CapitalActivity;
 import cn.sobne.myconvertor.ConvertorActivity;
+import cn.sobne.mytools.adtx.ContentADActivity;
+import cn.sobne.mytools.unity.AppUnity;
+import cn.sobne.mytools.unity.MainUtil;
+import cn.sobne.mytools.unity.SyncEventListener;
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends AppCompatActivity{
+    private static final String TAG = "MainActivity";
     private Button mConvertor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         init();
+        initEvents();//test
     }
     private View.OnClickListener clickListener=new View.OnClickListener() {
         @Override
@@ -37,6 +45,19 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     };
+    private void initEvents(){
+        MainUtil mainUtil=new MainUtil(this);
+        mainUtil.addSyncEventListener(new SyncEventListener() {
+            @Override
+            public void OnSynced(boolean synced) {
+                Log.d(TAG, synced+"==OnSynced==callServer");
+                if(synced){
+                    Toast.makeText(getApplicationContext(), "finish ", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        mainUtil.callServer();
+    }
     private void init()
     {
 //        mConvertor =(Button)findViewById(R.id.btnConvertor);
@@ -56,31 +77,43 @@ public class MainActivity extends AppCompatActivity {
                 switch(items[position])
                 {
                     case 0:
-                        startActivity(new Intent(MainActivity.this, ConvertorActivity.class));
-                        break;
-                    case 1:
-                        startActivity(new Intent(MainActivity.this, BarcodeActivity.class));
-                        break;
-                    case 2:
                         startActivity(new Intent(MainActivity.this, CapitalActivity.class));
                         break;
-                    case 3:
+                    case 1:
                         startActivity(new Intent(MainActivity.this, LedMonitorActivity.class));
+                        break;
+                    case 2:
+                        startActivity(new Intent(MainActivity.this, BarcodeActivity.class));
+                        break;
+                    case 3:
+                        startActivity(new Intent(MainActivity.this, ConvertorActivity.class));
+                        break;
+                    case 4:
+                        startActivity(new Intent(MainActivity.this, AscllActivity.class));
+                        break;
+                    case 5:
+                        if(AppUnity.AdId==1){
+                            startActivity(new Intent(MainActivity.this, ContentADActivity.class));
+                        }
                         break;
                 }
             }
         });
 
     }
-
-    private int[] items={0,1,2,3};
+    //aaaddd
+    private int[] items={0,1,2,3,4};
     private ArrayList<HashMap<String, Object>> getImageItems()
     {
         int[] imageRes = {
-                R.drawable.convertor,R.drawable.scan,R.drawable.zero,R.drawable.maquee
+                R.drawable.zero,R.drawable.maquee,R.drawable.scan,
+                R.drawable.convertor,R.drawable.ascll,
+                R.drawable.contentad
         };
         String[] name = {
-                "进制转换","条码扫描","大写数字","跑马灯"
+                "大写数字","跑马灯","条码扫描",
+                "进制转换","ASCLL",
+                "发现好玩"
         };
 
         ArrayList<HashMap<String, Object>> lstImageItem = new ArrayList<HashMap<String, Object>>();
@@ -92,5 +125,4 @@ public class MainActivity extends AppCompatActivity {
         }
         return lstImageItem;
     }
-
 }

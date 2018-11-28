@@ -3,24 +3,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!--<include-->
-        <!--android:id="@+id/adtx_nativeADContainer"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:layout_centerInParent="true"-->
-        <!--layout="@layout/adtx_nativelistitem" />-->
-    <FrameLayout
-        android:id="@+id/adtx_bannerContainer"
+    <include
+        android:id="@+id/adtx_nativeADContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true" >
-    </FrameLayout>
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        layout="@layout/adtx_nativelistitem" />
     <GridView
         android:id="@+id/gvmain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/adtx_bannerContainer"
+        android:layout_below="@id/adtx_nativeADContainer"
         android:layout_marginTop="10dp"
         android:columnWidth="90dp"
         android:gravity="center"

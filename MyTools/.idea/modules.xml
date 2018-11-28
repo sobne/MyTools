@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MyTools.iml" filepath="$PROJECT_DIR$/MyTools.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myascll/myascll.iml" filepath="$PROJECT_DIR$/myascll/myascll.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybarcode/mybarcode.iml" filepath="$PROJECT_DIR$/mybarcode/mybarcode.iml" />
       <module fileurl="file://$PROJECT_DIR$/mycapitalnumber/mycapitalnumber.iml" filepath="$PROJECT_DIR$/mycapitalnumber/mycapitalnumber.iml" />
       <module fileurl="file://$PROJECT_DIR$/myconvertor/myconvertor.iml" filepath="$PROJECT_DIR$/myconvertor/myconvertor.iml" />
