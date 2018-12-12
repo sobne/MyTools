@@ -1,9 +1,12 @@
 package cn.sobne.myconvertor;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.EditText;
 
 public class ConvertorActivity extends AppCompatActivity {
@@ -18,6 +21,22 @@ public class ConvertorActivity extends AppCompatActivity {
 
         init();
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.convertor,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId()==R.id.action_ascll){
+            startActivity(new Intent(ConvertorActivity.this,AscllActivity.class));
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     private void init()
     {
         et_bit=(EditText)findViewById(R.id.et_bit);

@@ -5,6 +5,7 @@
     <application
         android:theme="@style/AppTheme">
         <activity android:name=".ConvertorActivity" android:label="@string/convertor"/>
+        <activity android:name=".AscllActivity" android:label="@string/myascll"/>
     </application>
 
 </manifest>

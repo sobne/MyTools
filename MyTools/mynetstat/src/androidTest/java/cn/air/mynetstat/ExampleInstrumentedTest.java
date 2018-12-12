@@ -1,4 +1,4 @@
-package cn.sobne.myascll;
+package cn.air.mynetstat;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("cn.sobne.myascll", appContext.getPackageName());
+        assertEquals("cn.air.mynetstat", appContext.getPackageName());
     }
 }

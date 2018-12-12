@@ -1,4 +1,4 @@
-package cn.sobne.myascll;
+package cn.air.mynetstat;
 
 import org.junit.Test;
 

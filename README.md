@@ -1,4 +1,5 @@
 # MicroTools
+小程序工具箱（大写数字，跑马灯，条码生成扫描等）
 小程序工具箱. 包含:
 大写数字(输入金额,显示货币大写)
 跑马灯演示;
@@ -8,7 +9,8 @@ ASCLL码,16进制,字符直接互转
 
 history:
 
-20181128  MyAscll		new app
+20181212  MyNetstat		new app,check network connection
+20181128  MyConvertor		new function:MyAscll
 20181121  App			add GDTads
 20181120  App			add SyncEventListener
 20181119  MyLedMonitor		create maqueedisplay

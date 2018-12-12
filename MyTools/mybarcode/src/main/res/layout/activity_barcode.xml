@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Start Scan"/>
+        android:text="开始扫描"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,7 +21,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Result："
+            android:text="扫描结果："
             android:textSize="18sp"/>
 
         <TextView
@@ -37,13 +37,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
-        android:hint="Input the text"/>
+        android:digits="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+        android:inputType="text"
+        android:hint="请输入字母或数字"/>
 
     <Button
         android:id="@+id/btn_add_qrcode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Generate QRcode"/>
+        android:text="点击生成"/>
 
     <CheckBox
         android:id="@+id/logo"

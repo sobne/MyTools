@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/tv_ping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="@android:color/holo_blue_dark"
+                android:text="连接"/>
+
+            <EditText
+                android:id="@+id/et_ip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/tv_ping"
+                android:hint="请输入ip地址"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/Item.Layout">
+            <TextView
+                android:id="@+id/tv_ping_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="           ---------------设备信息--------------"
+
+            />
+
+        <RelativeLayout style="@style/Item.Layout">
+
+            <TextView
+                android:id="@+id/lianwangname"
+                style="@style/Item.Edit"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="联网方式"
+                />
+
+
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout style="@style/Item.Layout">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="内网ip" />
+
+            <TextView
+                android:id="@+id/ip"
+                style="@style/Item.Edit"
+                android:hint="内网ip" />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout style="@style/Item.Layout">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="mac地址" />
+
+            <TextView
+                android:id="@+id/wifimac"
+                style="@style/Item.Edit"
+                android:hint="mac地址" />
+
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/Item.Layout">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="无线路由器名" />
+
+            <TextView
+                android:id="@+id/getssid"
+                style="@style/Item.Edit"
+                android:hint="无线路由器名" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/Item.Layout">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="无线路由器地址" />
+
+            <TextView
+                android:id="@+id/getbssid"
+                style="@style/Item.Edit"
+                android:hint="无线路由器地址" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/Item.Layout">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="运营商" />
+
+            <TextView
+                android:id="@+id/simoperatorname"
+                style="@style/Item.Edit"
+                android:hint="simoperator"
+                android:inputType="number" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

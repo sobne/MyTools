@@ -14,8 +14,8 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import cn.air.mynetstat.NetstatActivity;
 import cn.sobne.LedMonitorActivity;
-import cn.sobne.myascll.AscllActivity;
 import cn.sobne.mybarcode.BarcodeActivity;
 import cn.sobne.mycapitalnumber.CapitalActivity;
 import cn.sobne.myconvertor.ConvertorActivity;
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity{
                         startActivity(new Intent(MainActivity.this, ConvertorActivity.class));
                         break;
                     case 4:
-                        startActivity(new Intent(MainActivity.this, AscllActivity.class));
+                        startActivity(new Intent(MainActivity.this, NetstatActivity.class));
                         break;
                     case 5:
                         if(AppUnity.AdId==1){
@@ -107,12 +107,12 @@ public class MainActivity extends AppCompatActivity{
     {
         int[] imageRes = {
                 R.drawable.zero,R.drawable.maquee,R.drawable.scan,
-                R.drawable.convertor,R.drawable.ascll,
+                R.drawable.convertor,R.drawable.netstat,
                 R.drawable.contentad
         };
         String[] name = {
                 "大写数字","跑马灯","条码扫描",
-                "进制转换","ASCLL",
+                "进制转换","设备状态",
                 "发现好玩"
         };
 

@@ -36,5 +36,5 @@ dependencies {
     implementation project(':mybarcode')
     implementation project(':mycapitalnumber')
     implementation project(':myledmonitor')
-    implementation project(':myascll')
+    implementation project(':mynetstat')
 }
