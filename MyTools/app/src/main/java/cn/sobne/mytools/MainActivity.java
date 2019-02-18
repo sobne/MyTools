@@ -19,6 +19,7 @@ import cn.sobne.LedMonitorActivity;
 import cn.sobne.mybarcode.BarcodeActivity;
 import cn.sobne.mycapitalnumber.CapitalActivity;
 import cn.sobne.myconvertor.ConvertorActivity;
+import cn.sobne.mytaxticket.TaxTicketActivity;
 import cn.sobne.mytools.adtx.ContentADActivity;
 import cn.sobne.mytools.unity.AppUnity;
 import cn.sobne.mytools.unity.MainUtil;
@@ -92,6 +93,9 @@ public class MainActivity extends AppCompatActivity{
                         startActivity(new Intent(MainActivity.this, NetstatActivity.class));
                         break;
                     case 5:
+                        startActivity(new Intent(MainActivity.this, TaxTicketActivity.class));
+                        break;
+                    case 6:
                         if(AppUnity.AdId==1){
                             startActivity(new Intent(MainActivity.this, ContentADActivity.class));
                         }
@@ -102,17 +106,17 @@ public class MainActivity extends AppCompatActivity{
 
     }
     //aaaddd
-    private int[] items={0,1,2,3,4};
+    private int[] items={0,1,2,3,4,5};
     private ArrayList<HashMap<String, Object>> getImageItems()
     {
         int[] imageRes = {
                 R.drawable.zero,R.drawable.maquee,R.drawable.scan,
-                R.drawable.convertor,R.drawable.netstat,
+                R.drawable.convertor,R.drawable.netstat,R.drawable.invoice,
                 R.drawable.contentad
         };
         String[] name = {
                 "大写数字","跑马灯","条码扫描",
-                "进制转换","设备状态",
+                "进制转换","设备状态","发票抬头",
                 "发现好玩"
         };
 

@@ -6,9 +6,15 @@
 条码/二维码 扫码及生成器;
 进制转换(2,8,16进制间互转);
 ASCLL码,16进制,字符直接互转
+网络状态信息
+发票抬头
 
 history:
 
+20190218	MyInvoice			delete function
+20190202	MyInvoice			invoice app done
+20190122	MyCapitalnumber		add functions: Vibrate&Ringtone
+20190110  MyInvoice		new app,invoice management
 20181212  MyNetstat		new app,check network connection
 20181128  MyConvertor		new function:MyAscll
 20181121  App			add GDTads

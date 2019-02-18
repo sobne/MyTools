@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/myconvertor/myconvertor.iml" filepath="$PROJECT_DIR$/myconvertor/myconvertor.iml" />
       <module fileurl="file://$PROJECT_DIR$/myledmonitor/myledmonitor.iml" filepath="$PROJECT_DIR$/myledmonitor/myledmonitor.iml" />
       <module fileurl="file://$PROJECT_DIR$/mynetstat/mynetstat.iml" filepath="$PROJECT_DIR$/mynetstat/mynetstat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mytaxticket/mytaxticket.iml" filepath="$PROJECT_DIR$/mytaxticket/mytaxticket.iml" />
       <module fileurl="file://$PROJECT_DIR$/utils4a-release/utils4a-release.iml" filepath="$PROJECT_DIR$/utils4a-release/utils4a-release.iml" />
     </modules>
   </component>

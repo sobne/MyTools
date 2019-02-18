@@ -1,5 +1,9 @@
 package cn.sobne.mycapitalnumber;
 
+import android.content.Context;
+import android.media.MediaPlayer;
+import android.media.RingtoneManager;
+import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -131,7 +135,8 @@ public class CapitalActivity extends AppCompatActivity {
                 return;
             }
         }else if(strInput.length()>16){
-            AudioUtils.play(1);
+            //AudioUtils.play(1);
+            vibrateandmedia();
             return;
         }
         strInput =(strInput.equals("0")?"":strInput) + String.valueOf(i);
@@ -140,5 +145,35 @@ public class CapitalActivity extends AppCompatActivity {
     private String convertCapital(String str){
         BigDecimal numberOfMoney = new BigDecimal(str);
         return Number2Zh.number2CNMontrayUnit(numberOfMoney);
+    }
+
+
+    private MediaPlayer mMediaPlayer;
+    private void releaseMedia(){
+        if(mMediaPlayer!=null){
+            mMediaPlayer.stop();
+            mMediaPlayer.release();
+            mMediaPlayer=null;
+        }
+    }
+    private void vibrateandmedia()
+    {
+        Vibrator mVibrator=(Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
+        mVibrator.vibrate(500);
+        releaseMedia();
+        mMediaPlayer=new MediaPlayer();
+        try{
+            mMediaPlayer.setDataSource(CapitalActivity.this,RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION));
+            mMediaPlayer.prepare();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        mMediaPlayer.start();
+    }
+
+    @Override
+    protected void onDestroy() {
+        releaseMedia();
+        super.onDestroy();
     }
 }

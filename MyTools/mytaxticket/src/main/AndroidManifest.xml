@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.sobne.mytaxticket">
+
+    <application android:theme="@style/AppTheme">
+        <activity
+            android:name=".TaxTicketActivity"
+            android:label="my tax tickets" />
+        <activity android:name=".TaxEditActivity" />
+        <activity android:name=".InvoicePagerActivity"></activity>
+    </application>
+
+</manifest>
