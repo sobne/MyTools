@@ -17,6 +17,7 @@ import java.util.HashMap;
 import cn.air.mynetstat.NetstatActivity;
 import cn.sobne.LedMonitorActivity;
 import cn.sobne.mybarcode.BarcodeActivity;
+import cn.sobne.mycalculate.CalculateActivity;
 import cn.sobne.mycapitalnumber.CapitalActivity;
 import cn.sobne.myconvertor.ConvertorActivity;
 import cn.sobne.mytaxticket.TaxTicketActivity;
@@ -78,24 +79,27 @@ public class MainActivity extends AppCompatActivity{
                 switch(items[position])
                 {
                     case 0:
-                        startActivity(new Intent(MainActivity.this, CapitalActivity.class));
+                        startActivity(new Intent(MainActivity.this, CalculateActivity.class));
                         break;
                     case 1:
-                        startActivity(new Intent(MainActivity.this, LedMonitorActivity.class));
+                        startActivity(new Intent(MainActivity.this, CapitalActivity.class));
                         break;
                     case 2:
-                        startActivity(new Intent(MainActivity.this, BarcodeActivity.class));
+                        startActivity(new Intent(MainActivity.this, LedMonitorActivity.class));
                         break;
                     case 3:
-                        startActivity(new Intent(MainActivity.this, ConvertorActivity.class));
+                        startActivity(new Intent(MainActivity.this, BarcodeActivity.class));
                         break;
                     case 4:
-                        startActivity(new Intent(MainActivity.this, NetstatActivity.class));
+                        startActivity(new Intent(MainActivity.this, ConvertorActivity.class));
                         break;
                     case 5:
-                        startActivity(new Intent(MainActivity.this, TaxTicketActivity.class));
+                        startActivity(new Intent(MainActivity.this, NetstatActivity.class));
                         break;
                     case 6:
+                        startActivity(new Intent(MainActivity.this, TaxTicketActivity.class));
+                        break;
+                    case 7:
                         if(AppUnity.AdId==1){
                             startActivity(new Intent(MainActivity.this, ContentADActivity.class));
                         }
@@ -106,16 +110,16 @@ public class MainActivity extends AppCompatActivity{
 
     }
     //aaaddd
-    private int[] items={0,1,2,3,4,5};
+    private int[] items={1,2,3,4,5,6};
     private ArrayList<HashMap<String, Object>> getImageItems()
     {
         int[] imageRes = {
-                R.drawable.zero,R.drawable.maquee,R.drawable.scan,
+                R.drawable.calc,R.drawable.zero,R.drawable.maquee,R.drawable.scan,
                 R.drawable.convertor,R.drawable.netstat,R.drawable.invoice,
                 R.drawable.contentad
         };
         String[] name = {
-                "大写数字","跑马灯","条码扫描",
+                "计算器","大写数字","跑马灯","条码扫描",
                 "进制转换","设备状态","发票抬头",
                 "发现好玩"
         };

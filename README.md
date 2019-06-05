@@ -1,6 +1,7 @@
 # MicroTools
 小程序工具箱（大写数字，跑马灯，条码生成扫描等）
 小程序工具箱. 包含:
+简单计算器
 大写数字(输入金额,显示货币大写)
 跑马灯演示;
 条码/二维码 扫码及生成器;
@@ -11,6 +12,7 @@ ASCLL码,16进制,字符直接互转
 
 history:
 
+20190423  MyCalculate		new app,calculation
 20190218	MyInvoice			delete function
 20190202	MyInvoice			invoice app done
 20190122	MyCapitalnumber		add functions: Vibrate&Ringtone

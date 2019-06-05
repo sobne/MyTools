@@ -1,1 +1,1 @@
-include ':app', ':myconvertor', ':mybarcode', ':mycapitalnumber', ':myledmonitor', ':utils4a-release', ':mynetstat', ':mytaxticket'
+include ':app', ':myconvertor', ':mybarcode', ':mycapitalnumber', ':myledmonitor', ':utils4a-release', ':mynetstat', ':mytaxticket', ':mycalculate'

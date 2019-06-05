@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.sobne.mycalculate">
+
+    <application>
+        <activity android:name=".CalculateActivity"  android:label="计算器">
+        </activity>
+    </application>
+
+</manifest>

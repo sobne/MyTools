@@ -63,7 +63,9 @@
             android:id="@+id/et_bankaccount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
+            android:inputType="textMultiLine"
+            android:lines="3"
+            android:minLines="1"
             android:textColor="@color/colorPrimaryDark"/>
     </LinearLayout>
     <Button
